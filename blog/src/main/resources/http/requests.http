@@ -1,0 +1,33 @@
+### Получение списка авторов
+
+GET localhost/authors?page=0
+
+### Добавление автора
+
+PUT localhost/authors
+Content-Type: application/json
+
+{
+  "firstName": "Марат",
+  "lastName": "Арсланов"
+}
+
+### Обновление автора
+
+PATCH localhost/authors/1
+Content-Type: application/json
+
+{
+  "firstName" : "Александр",
+  "lastName": "Пушкин"
+}
+
+### Получение всех постов определенного автора с пагинацией и сортировкой
+
+GET localhost/authors/1/posts?page=0&sort=title&order=desc
+
+### Удаление определенного поста определенного автора
+
+DELETE localhost/authors/1/posts/1
+
+### Тестирование добавление/изменение поста через сваггер

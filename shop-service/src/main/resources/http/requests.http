@@ -1,0 +1,32 @@
+### Adding product
+
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "milk",
+  "price": 80
+}
+
+### Getting products
+
+GET http://localhost:8080/products
+
+### Updating product
+
+PUT http://localhost:8080/products/5
+Content-Type: application/json
+
+{
+  "name": "tea",
+  "price": 199
+}
+
+### Deleting product
+
+DELETE http://localhost:8080/products/1
+
+### Getting all accounts that have products in cart.
+### Number of discount days for these products is equal to the parameter dayNum
+
+GET http://localhost:8080/accounts?dayNum=17
